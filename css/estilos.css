@@ -95,6 +95,60 @@ h2.primer-titulo {
   margin-bottom: 1em;
 }
 
+.contenedor-dato {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.contenedor-dato h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.tarjeta-dato {
+  background-color: #eef2f7;
+  border-left: 4px solid #3498db;
+  padding: 1.25rem;
+  border-radius: 6px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.texto-dato {
+  color: #34495e;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.boton-dato {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.boton-dato:hover {
+  background-color: #2980b9;
+}
+
+.boton-dato:active {
+  transform: scale(0.98);
+}
 footer {
   background-color: cadetblue;
   margin: 1em auto 1em auto;
