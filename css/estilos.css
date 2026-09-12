@@ -38,9 +38,64 @@ body {
 }
 
 .imagen {
+  width: 60%;
+  height: 60%;
+  display: block;
+  text-align: center;
+}
+
+.imagen-inicio {
   width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slider-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+/* Reset de la lista HTML */
+.slides-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* Estado por defecto y visibilidad */
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+/* Estilos de la info de la obra */
+.slide-info {
+  position: inherit;
+  font-size: medium;
+  padding: 0, 50px 0;
+  text-align: center;
+}
+
+.obra-year {
+  margin: 4px 0 0 0;
+  font-size: 2rem;
+  color: #666666;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 header {
@@ -83,7 +138,7 @@ main {
 h1 {
   text-align: center;
   font-size: 2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0em;
 }
 
 h2.primer-titulo {
@@ -95,7 +150,7 @@ h2.primer-titulo {
 #frase {
   text-align: center;
   color: rgb(15, 34, 204);
-  font-size: 1.2em;
+  font-size: 1, 5em;
   font-style: italic;
   margin-bottom: 1em;
 }
@@ -154,6 +209,7 @@ h2.primer-titulo {
 .boton-dato:active {
   transform: scale(0.98);
 }
+
 footer {
   background-color: cadetblue;
   margin: 1em auto 1em auto;
