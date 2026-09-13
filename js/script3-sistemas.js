@@ -40,7 +40,7 @@ function generarCampos() {
   document.querySelector("#seccion-paso2").classList.remove("oculto");
 }
 
-// 2. Procesa y muestra los resultados
+// 2. Procesa y muestra los resultados (Versión ultra simplificada)
 function calcularResultados() {
   let totalKwh = 0;
   let mayorHoras = -1;
@@ -50,28 +50,36 @@ function calcularResultados() {
 
   const bloques = document.querySelectorAll(".bloque-obra");
 
-  bloques.forEach((bloque) => {
+  // Recorrido simple con un for tradicional
+  for (let i = 0; i < bloques.length; i++) {
+    let bloque = bloques[i];
+
     let nombre = bloque.querySelector(".inp-nombre").value;
-    let luces = bloque.querySelector(".inp-luces").valueAsNumber || 0;
-    let horas = bloque.querySelector(".inp-horas").valueAsNumber || 0;
+    let luces = +bloque.querySelector(".inp-luces").value || 0;
+    let horas = +bloque.querySelector(".inp-horas").value || 0;
     let kwh = +bloque.querySelector(".inp-kwh").value || 0;
     let costoKwh = +bloque.querySelector(".inp-costo").value || 0;
 
+    // Total de kWh acumulado
     totalKwh += kwh;
 
+    // Evaluación de la obra con mayor tiempo de funcionamiento
     if (horas > mayorHoras) {
       mayorHoras = horas;
       obraMayorNombre = nombre;
       obraMayorCostoDiario = kwh * costoKwh;
     }
 
+    // Conteo de obras con más de 20 luces
     if (luces > 20) {
       obrasConMasDe20Luces++;
     }
-  });
+  }
 
+  // Porcentaje de obras con más de 20 luces
   let porcentajeMas20 = (obrasConMasDe20Luces / totalObras) * 100;
 
+  // Despliegue de resultados en el DOM
   document.querySelector("#resTotalKwh").textContent =
     totalKwh.toFixed(2) + " kWh";
   document.querySelector("#resNombreMayor").textContent = obraMayorNombre;
