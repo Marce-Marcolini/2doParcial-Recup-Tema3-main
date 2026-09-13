@@ -160,7 +160,7 @@ h2.primer-titulo {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  max-width: 400px;
+  max-width: 280px;
   width: 90%;
   text-align: center;
 }
@@ -208,6 +208,71 @@ h2.primer-titulo {
 
 .boton-dato:active {
   transform: scale(0.98);
+}
+
+.card {
+  background: #3d5783;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.bloque-obra {
+  background: #3d5783;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+label {
+  display: block;
+  margin: 8px 0 4px;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #0284c7;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0369a1;
+}
+
+.btn-reset {
+  background: #dc7e26;
+}
+
+.btn-reset:hover {
+  background: #b9681c;
+}
+
+.oculto {
+  display: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #334155;
+  margin: 10px 0;
 }
 
 footer {
