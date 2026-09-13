@@ -34,7 +34,7 @@ body {
   padding: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   border: 1px solid #e1e8ed;
-  border-top: 4px solid #8e44ad; /* Color de acento para destacar */
+  border-top: 4px solid #8e44ad; /* Color para destacar el borde */
 }
 
 .imagen {
