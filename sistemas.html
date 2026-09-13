@@ -26,10 +26,6 @@
       </nav>
     </header>
 
-    <div class="imagen">
-      <img src="img/lozano-hemmer-2.jpg" alt="Obra 2" />
-    </div>
-
     <main class="contenedor-columnas">
       <!--COLUMNA 1-->
       <div class="columna">
@@ -40,6 +36,60 @@
           </article>
           <button type="button" class="boton-dato">Nuevo dato</button>
         </section>
+      </div>
+      <div class="imagen">
+        <img src="img/lozano-hemmer-2.jpg" alt="Obra 2" />
+      </div>
+
+      <div class="contenedor-sistema">
+        <h2>Funcionamiento lumínico de las obras de Rafael Lozano-Hemmer</h2>
+        <p>
+          Ingrese la cantidad de obras que desea analizar y luego complete los
+          datos de cada una para calcular los resultados del funcionamiento
+          energético.
+        </p>
+
+        <!-- PASO 1 Cargar Cantidad de obras -->
+        <div id="seccion-paso1" class="card">
+          <label for="cantObras">Cantidad de obras a analizar:</label>
+          <input type="number" id="cantObras" min="1" placeholder="Ej: 3" />
+          <button onclick="generarCampos()">Continuar</button>
+        </div>
+
+        <!-- PASO 2 Información de las obras-->
+        <div id="seccion-paso2" class="card oculto">
+          <div id="camposObras"></div>
+          <button onclick="calcularResultados()">Calcular Resultados</button>
+        </div>
+
+        <!-- RESULTADOS -->
+        <div id="seccion-resultados" class="card oculto">
+          <h2>RESULTADO DE INFORMACIÓN DE OBRAS</h2>
+
+          <p>
+            <strong>Total de kWh por día (todas las obras):</strong>
+            <span id="resTotalKwh"></span>
+          </p>
+          <hr />
+          <p>
+            <strong>Obra con mayor tiempo de funcionamiento:</strong>
+            <span id="resNombreMayor"></span>
+          </p>
+          <p>
+            <strong>Costo diario de esta obra:</strong> $<span
+              id="resCostoMayor"
+            ></span>
+          </p>
+          <hr />
+          <p>
+            <strong>% de obras que utilizan más de 20 luces:</strong>
+            <span id="resPorcentajeLuces"></span>%
+          </p>
+
+          <button onclick="location.reload()" class="btn-reset">
+            Limpiar y Recargar
+          </button>
+        </div>
       </div>
     </main>
 
@@ -52,7 +102,8 @@
       </p>
     </footer>
 
-    <!-- conecta con el archivo js de Datos Curiosos-->
-    <script src="js/script1.js"></script>
+    <!-- conecta con los archivos js -->
+    <script src="js/script1-datos.js"></script>
+    <script src="js/script3-sistemas.js"></script>
   </body>
 </html>
