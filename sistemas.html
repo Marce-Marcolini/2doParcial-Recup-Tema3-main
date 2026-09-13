@@ -33,6 +33,7 @@
         <img src="img/lozano-hemmer-2.jpg" alt="Obra 2" />
       </div>
 
+      <!--Listado de obras más reconocidas-->
       <aside class="lista-obras">
         <h2>Obras y Conceptos clave</h2>
         <ul>
@@ -57,6 +58,7 @@
         </ul>
       </aside>
 
+      <!--EJERCICIO: Un sistema para controlar funcionamiento de luces-->
       <div class="contenedor-sistema">
         <h2>Funcionamiento lumínico de las obras de Rafael Lozano-Hemmer</h2>
         <p>
@@ -65,14 +67,14 @@
           energético.
         </p>
 
-        <!-- PASO 1 Cargar Cantidad de obras -->
+        <!--PASO 1 Cargar Cantidad de obras, al ingresar se despliega el menú de carga de datos-->
         <div id="seccion-paso1" class="card">
           <label for="cantObras">Cantidad de obras a analizar:</label>
           <input type="number" id="cantObras" min="1" placeholder="Ej: 3" />
           <button onclick="generarCampos()">Continuar</button>
         </div>
 
-        <!-- PASO 2 Información de las obras-->
+        <!-- PASO 2 Carga de Información de las obras-->
         <div id="seccion-paso2" class="card oculto">
           <div id="camposObras"></div>
           <button onclick="calcularResultados()">Calcular Resultados</button>
@@ -102,6 +104,7 @@
             <span id="resPorcentajeLuces"></span>%
           </p>
 
+          <!--Botón para limpiar la información y recargar-->
           <button onclick="location.reload()" class="btn-reset">
             Limpiar y Recargar
           </button>
